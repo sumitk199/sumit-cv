@@ -1,3 +1,4 @@
+// tap to scroll
 $(document).on("click", 'a[href^="#"]', function (event) {
   event.preventDefault();
   $("html, body").animate(
@@ -7,6 +8,8 @@ $(document).on("click", 'a[href^="#"]', function (event) {
     1000
   );
 });
+
+// slides
 $(document).ready(function () {
   $(".projects ul").slick({
     infinite: true,
@@ -19,6 +22,8 @@ $(document).ready(function () {
     // nextArrow: '<button class="slide-arrow next-arrow"></button>',
   });
 });
+
+// loader
 $(document).ready(function () {
   setTimeout(function () {
     $("#container").addClass("loaded");
@@ -33,19 +38,22 @@ $(document).ready(function () {
     }
   }, 3000);
 });
-$(document).ready(function () {
-  $(".get-in-touch").click(function () {
-    $(".popup-wrapper").fadeIn(500);
-    $(".popup-overlay").fadeIn(500);
-  });
-  $(".popup-close").click(function () {
-    $(".popup-wrapper").fadeOut(500);
-    $(".popup-overlay").fadeOut(500);
-  });
-});
-document.getElementById("submit").addEventListener("click", function (e) {
-  e.preventDefault(); // prevent the default anchor behavior
 
-  // Submit the form
-  document.getElementById("myForm").submit();
+// $(document).ready(function () {
+//   $(".get-in-touch").click(function () {
+//     $(".popup-wrapper").fadeIn(500);
+//     $(".popup-overlay").fadeIn(500);
+//   });
+//   $(".popup-close").click(function () {
+//     $(".popup-wrapper").fadeOut(500);
+//     $(".popup-overlay").fadeOut(500);
+//   });
+// });
+
+//scroll header
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $("header");
+    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+  });
 });

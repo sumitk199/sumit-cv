@@ -21,7 +21,7 @@ li {
   list-style: none;
 }
 .container {
-  width: 1200px;
+  width: 1180px;
   margin: auto;
 }
 
@@ -144,13 +144,22 @@ li {
 /* loader end */
 
 .header-bg {
-  background: transparent;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
-  /* border-radius: 0px 0px 50px 50px; */
-  padding: 20px 0;
+  padding: 10px 0px;
   position: fixed;
   width: 100%;
   z-index: 999999;
+}
+.header-bg .scrolled {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(6, 216, 167, 0.3);
+  padding: 10px 20px;
+  /* background: transparent !important; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 200ms linear;
+  border-radius: 50px;
+  width: 1200px;
+  margin: auto;
 }
 header {
   display: flex;
@@ -182,6 +191,7 @@ header .logo img {
   background: #24315e;
   border-radius: 30px;
   margin-left: 260px;
+  margin-right: 0;
 }
 .menu li:last-child a {
   padding: 10px 20px;
@@ -201,6 +211,7 @@ header .logo img {
 .get-in-touch {
   position: relative;
 }
+
 .slider-bg {
   background-image: url(../images/main-bg.jpg);
   background-position: center;
@@ -211,11 +222,12 @@ header .logo img {
 }
 .slider {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 .slider .left-panel {
   width: 50%;
+  margin-top: 150px;
 }
 .slider .left-panel h3 {
   font-size: 30px;
@@ -223,16 +235,45 @@ header .logo img {
 }
 .slider .left-panel h1 {
   font-size: 50px;
-  margin: 20px 0 10px;
+  margin: 20px 0 6px;
   color: #24315e;
 }
-.slider .left-panel p{
-  font-size: 18px;
+.slider .left-panel i {
   text-transform: uppercase;
-
+  font-size: 16px;
+  font-style: normal;
+  position: relative;
+}
+.slider .left-panel i::after {
+  content: "";
+  background: #fea237;
+  height: 5px;
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 7px;
+  margin-left: 10px;
+}
+.slider .left-panel p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.slider .left-panel .cv-btn {
+  background: linear-gradient(45deg, #fea237 0%, #ffd83a 100%);
+  border-radius: 30px;
+  font-size: 16px;
+  color: #121212;
+  font-weight: 600;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
 }
 .slider .right-panel {
   width: 45%;
+  margin-top: 50px;
+}
+.slider .right-panel img {
+  width: 100%;
 }
 /* Laptop size back (laptop, tablet, cell phone) */
 @media screen and (max-width: 767px) {
