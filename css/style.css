@@ -358,7 +358,6 @@ header .logo img {
     height: 100px;
     width: 100px;
   }
-
   .header-bg {
     width: 100%;
     position: fixed;
@@ -374,6 +373,64 @@ header .logo img {
   }
   .logo img {
     width: 100%;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .slider-bg {
+    height: auto;
+    padding: 20px 0;
+  }
+  .slider .right-panel {
+    width: 80%;
+    /* margin-top: 50px; */
+    z-index: 1;
+    margin: 50px auto;
+  }
+  .slider .left-panel {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .slider .left-panel h1 {
+    font-size: 30px;
+    margin: 10px 0 6px;
+    line-height: 30px;
+  }
+  .slider .left-panel h3 {
+    font-size: 24px;
+  }
+  .slider .left-panel p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 24px;
+  }
+  .slider .left-panel .cv-btn {
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 6px 14px;
+  }
+  .career-obj h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .career-obj p {
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    margin: auto;
+    text-align: justify;
+  }
+  .career-obj h2::after {
+    width: 15px;
+  }
+  .career-obj h2::before {
+    width: 15px;
+    margin-left: -25px;
+  }
+  .career-obj {
+    padding-top: 50px;
   }
 }
 @media screen and (max-width: 500px) {
