@@ -10,18 +10,18 @@ $(document).on("click", 'a[href^="#"]', function (event) {
 });
 
 // slides
-$(document).ready(function () {
-  $(".projects ul").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    // prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-    // nextArrow: '<button class="slide-arrow next-arrow"></button>',
-  });
-});
+// $(document).ready(function () {
+//   $(".projects ul").slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     arrows: false,
+//     // prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+//     // nextArrow: '<button class="slide-arrow next-arrow"></button>',
+//   });
+// });
 
 // loader
 $(document).ready(function () {
