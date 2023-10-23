@@ -1,5 +1,11 @@
+/* :root{
+  --f: #ddd;
+} */
 body {
-  background: #fff;
+  /* background: #fff; */
+  background-color: #24315e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231c2a56' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+  /* background-color: ; */
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 30px;
@@ -24,7 +30,10 @@ li {
   width: 1180px;
   margin: auto;
 }
-
+.cv-body {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
 /* Preloader */
 .container-preloader {
   align-items: center;
@@ -257,7 +266,13 @@ header .logo img {
 .slider .left-panel p {
   font-size: 18px;
   margin-top: 20px;
+  /* text-transform: uppercase; */
 }
+
+.slider-left-text {
+  height: 20px;
+}
+
 .slider .left-panel .cv-btn {
   background: linear-gradient(45deg, #fea237 0%, #ffd83a 100%);
   border-radius: 30px;
@@ -271,10 +286,66 @@ header .logo img {
 .slider .right-panel {
   width: 45%;
   margin-top: 50px;
+  z-index: 1;
 }
 .slider .right-panel img {
   width: 100%;
 }
+
+.career-obj {
+  text-align: center;
+  padding-top: 200px;
+  color: #fff;
+}
+.career-obj h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.career-obj span {
+  color: #fea237;
+}
+.career-obj h2::after {
+  content: "";
+  background: #fea237;
+  height: 3px;
+  width: 50px;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 15px;
+  margin-left: 10px;
+}
+.career-obj h2::before {
+  content: "";
+  background: #fea237;
+  height: 3px;
+  width: 50px;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  top: 15px;
+  margin-left: -60px;
+}
+.career-obj p {
+  font-size: 18px;
+  font-weight: normal;
+  width: 60%;
+  margin: auto;
+}
+.T-T-S-btn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  border: none;
+}
+
 /* Laptop size back (laptop, tablet, cell phone) */
 @media screen and (max-width: 767px) {
   .container {
