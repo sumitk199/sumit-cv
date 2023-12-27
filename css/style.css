@@ -1,20 +1,19 @@
-/* :root{
-  --f: #ddd;
-} */
 body {
-  /* background: #fff; */
-  background-color: #24315e;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231c2a56' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
-  /* background-color: ; */
+  background-image: url(../images/main-bg-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-color: #24315e; */
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 30px;
   user-select: none;
 }
-/* body::selection {
-  background-color: #f00;
+body::selection {
+  background-color: #ffd83a;
   color: #fff;
-} */
+}
 * {
   padding: 0;
   margin: 0;
@@ -37,7 +36,9 @@ li {
 .cv-body {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 60px 0;
+  margin-top: 100px;
 }
 /* Preloader */
 .container-preloader {
@@ -159,13 +160,14 @@ li {
   width: 100%;
   z-index: 999999;
 }
-.header-bg .scrolled {
+.h-bg {
+  padding: 10px 20px;
+}
+.scrolled {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgb(255, 255, 255, 0.5);
-  padding: 10px 20px;
-  /* background: transparent !important; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   transition: background-color 200ms linear;
   border-radius: 50px;
   width: 100%;
@@ -223,15 +225,6 @@ header .logo img {
 }
 .get-in-touch {
   position: relative;
-}
-
-.slider-bg {
-  background-image: url(../images/main-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  /* padding-top: 200px; */
 }
 .slider {
   display: flex;
@@ -298,8 +291,7 @@ header .logo img {
 
 .heading {
   text-align: center;
-  padding-top: 200px;
-  color: #fff;
+  color: #121212;
 }
 .heading h2 {
   font-size: 40px;
@@ -335,7 +327,7 @@ header .logo img {
   text-align: center;
   width: 70%;
   margin: auto;
-  color: #f9f9f9;
+  color: #121212;
 }
 .projects {
   margin-top: 80px;
@@ -353,23 +345,26 @@ header .logo img {
 .projects li {
   width: 32%;
   padding: 30px 20px 20px;
-  /* background: #121212; */
-  /* border: 2px solid #394880; */
+  margin: 10px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: rgba(240, 240, 240,0.7);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 .projects li img {
   width: 200px;
   border-radius: 20px;
+  margin: auto;
 }
-.projects li:hover {
+/* .projects li:hover {
   background: #121212;
-}
+} */
 .projects li h3 {
   font-size: 24px;
   color: #ffd83a;
@@ -377,7 +372,7 @@ header .logo img {
 }
 .projects li p {
   font-size: 16px;
-  color: #fff;
+  color: #121212;
 }
 .projects li a {
   font-size: 16px;
@@ -386,9 +381,9 @@ header .logo img {
   display: inline-block;
   transition: all 0.3s;
 }
-.projects li a:hover {
+/* .projects li a:hover {
   color: #24315e;
-}
+} */
 .T-T-S-btn {
   display: none;
   cursor: pointer;
@@ -400,7 +395,6 @@ header .logo img {
   height: 60px;
   border-radius: 50%;
   background: #fea237;
-  /* color: white; */
   border: none;
 }
 .T-T-S-btn img {
@@ -474,7 +468,7 @@ header .logo img {
   }
   .slider .left-panel {
     width: 100%;
-    margin-top: 10px;
+    margin-top: -60px;
   }
   .slider .left-panel h1 {
     font-size: 30px;

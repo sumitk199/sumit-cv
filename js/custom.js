@@ -10,18 +10,18 @@ $(document).on("click", 'a[href^="#"]', function (event) {
 });
 
 // slides
-// $(document).ready(function () {
-//   $(".projects ul").slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//     arrows: false,
-//     // prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-//     // nextArrow: '<button class="slide-arrow next-arrow"></button>',
-//   });
-// });
+$(document).ready(function () {
+  $(".projects ul").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    // prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    // nextArrow: '<button class="slide-arrow next-arrow"></button>',
+  });
+});
 
 // loader
 $(document).ready(function () {
@@ -39,21 +39,10 @@ $(document).ready(function () {
   }, 3000);
 });
 
-// $(document).ready(function () {
-//   $(".get-in-touch").click(function () {
-//     $(".popup-wrapper").fadeIn(500);
-//     $(".popup-overlay").fadeIn(500);
-//   });
-//   $(".popup-close").click(function () {
-//     $(".popup-wrapper").fadeOut(500);
-//     $(".popup-overlay").fadeOut(500);
-//   });
-// });
-
 //scroll header
 $(function () {
   $(document).scroll(function () {
-    var $nav = $("header");
+    var $nav = $(".h-bg");
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
 });
@@ -86,50 +75,3 @@ const scrollToTop = () => {
 
 displayButton();
 scrollToTop();
-
-// slider front end developer
-
-// var words = ["Front End Developer", "Develop unique websites"],
-//   part,
-//   i = 0,
-//   offset = 0,
-//   len = words.length,
-//   forwards = true,
-//   skip_count = 0,
-//   skip_delay = 15,
-//   speed = 70;
-// var wordflick = function () {
-//   setInterval(function () {
-//     if (forwards) {
-//       if (offset >= words[i].length) {
-//         ++skip_count;
-//         if (skip_count == skip_delay) {
-//           forwards = false;
-//           skip_count = 0;
-//         }
-//       }
-//     } else {
-//       if (offset == 0) {
-//         forwards = true;
-//         i++;
-//         offset = 0;
-//         if (i >= len) {
-//           i = 0;
-//         }
-//       }
-//     }
-//     part = words[i].substr(0, offset);
-//     if (skip_count == 0) {
-//       if (forwards) {
-//         offset++;
-//       } else {
-//         offset--;
-//       }
-//     }
-//     $(".word").text(part);
-//   }, speed);
-// };
-
-// $(document).ready(function () {
-//   wordflick();
-// });
