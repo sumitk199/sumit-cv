@@ -1,9 +1,11 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: #02162b;
+  overflow-x: hidden;
   padding: 10px;
   font-family: "Inter", sans-serif;
   line-height: normal;
@@ -12,6 +14,15 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   scroll-behavior: smooth;
+}
+#preloader {
+  background: #02162b
+    url(https://icons8.com/preloaders/preloaders/1495/Spinner-3.gif) no-repeat
+    center center;
+  position: fixed;
+  z-index: 99999999999;
+  width: 100%;
+  height: 100vh;
 }
 * {
   padding: 0;
