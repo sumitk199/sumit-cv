@@ -125,9 +125,9 @@ header .logo img {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-.my-card::before:hover {
+/* .my-card::before:hover {
   content: "I'm available for work";
-}
+} */
 .my-card h3 {
   font-size: 18px;
   color: #fff;
